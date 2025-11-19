@@ -3,7 +3,7 @@
 Hệ thống báo cáo và quản lý sự cố cơ sở vật chất trường Đại học Bách Khoa - ĐHQG TP.HCM.
 Đồ án môn học Hệ thống thông tin.
 
-![HCMUT Logo](./frontend/src/assets/images/hcmut.png)
+![HCMUT Logo](https://upload.wikimedia.org/wikipedia/commons/d/de/HCMUT_official_logo.png)
 
 ## 🚀 Công nghệ sử dụng (Tech Stack)
 
