@@ -1,0 +1,270 @@
+/* === 1. Thiết lập cơ bản (Variables) === */
+:root {
+  --bk-blue: #034ea2;       /* Màu xanh Bách Khoa chuẩn */
+  --bk-light-blue: #0073cd; /* Màu xanh sáng hơn (khi hover) */
+  --bg-gray: #f5f7fa;       /* Màu nền xám nhạt hiện đại */
+  --text-primary: #333;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', 'Segoe UI', Helvetica, Arial, sans-serif;
+  background-color: var(--bg-gray);
+  color: var(--text-primary);
+  min-height: 100vh;
+  font-size: 14px; /* Font chữ gọn gàng */
+}
+
+/* === 2. Layout & Container === */
+.container {
+  max-width: 1140px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
+
+.content-card {
+  background: var(--white);
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  margin-bottom: 20px;
+  border-top: 3px solid var(--bk-blue); /* Điểm nhấn xanh trên đầu thẻ */
+}
+
+/* === 3. Header (Thanh điều hướng) === */
+.main-header {
+  background: var(--white);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Phần header màu xanh trên cùng */
+.header-top {
+  background: var(--bk-blue);
+  color: white;
+  padding: 10px 0;
+}
+
+.header-top .container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.header-logo-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-logo {
+  height: 45px;
+  background: white;
+  border-radius: 50%;
+  padding: 2px;
+}
+
+.header-title {
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.header-subtitle {
+  font-size: 11px;
+  font-weight: 300;
+  opacity: 0.9;
+}
+
+/* Thanh menu trắng bên dưới */
+.main-nav {
+  background: white;
+  border-bottom: 1px solid #eee;
+}
+
+.nav-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-item {
+  padding: 15px 0;
+  background: none;
+  border: none;
+  color: #555;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  text-transform: uppercase;
+  transition: all 0.2s;
+}
+
+.nav-item:hover {
+  color: var(--bk-blue);
+}
+
+.nav-item.active {
+  color: var(--bk-blue);
+  border-bottom-color: var(--bk-blue);
+}
+
+/* === 4. Form & Inputs === */
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #444;
+  font-size: 13px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 14px;
+  transition: border-color 0.2s;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--bk-blue);
+  box-shadow: 0 0 0 2px rgba(3, 78, 162, 0.1);
+}
+
+/* === 5. Buttons === */
+.btn-primary {
+  padding: 10px 20px;
+  background-color: var(--bk-blue);
+  color: white;
+  border: none;
+  border-radius: 3px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 13px;
+  text-transform: uppercase;
+  transition: background 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: var(--bk-light-blue);
+}
+
+.logout-button {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 5px 12px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.logout-button:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* === 6. Table & Status === */
+.ticket-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  font-size: 13px;
+}
+
+.ticket-table th {
+  background: #f8f9fa;
+  color: #444;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 12px;
+  border-bottom: 2px solid #ddd;
+  text-align: left;
+}
+
+.ticket-table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  color: #555;
+}
+
+.status-badge {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.status-new { background: #e3f2fd; color: #1565c0; }
+.status-in-progress { background: #fff3e0; color: #ef6c00; }
+.status-resolved { background: #e8f5e9; color: #2e7d32; }
+
+/* === 7. Login Page Specific === */
+.login-wrapper {
+  min-height: 100vh;
+  /* Ảnh nền trường Bách Khoa */
+  background: url('https://hcmut.edu.vn/img/campus/campus-1.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(3, 78, 162, 0.85); /* Lớp phủ màu xanh đè lên ảnh */
+}
+
+.login-box {
+  position: relative;
+  z-index: 2;
+  background: white;
+  padding: 40px 30px;
+  border-radius: 4px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* === 8. Modal === */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.modal-content {
+  background: white;
+  padding: 25px;
+  border-radius: 4px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  border-top: 4px solid var(--bk-blue);
+}
